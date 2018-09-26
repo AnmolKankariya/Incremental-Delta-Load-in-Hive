@@ -6,9 +6,9 @@ One of those approch will give more optimal result with no performance issues.
 
 You will find two files inside repository- 
 
-   incremental.sh - A Shell script that contains relevant command to automate the process.
+   *incremental.sh* - A Shell script that contains relevant command to automate the process.
   
-   part.hql - A hive query file that contains commands to perform dynamic partitioning.
+   *part.hql* - A hive query file that contains commands to perform dynamic partitioning.
       
 Steps to perform incremental append-
 1. Create a partitioned table in hive.
