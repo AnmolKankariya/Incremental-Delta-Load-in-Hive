@@ -34,3 +34,7 @@ Steps to perform incremental append-
 5. Run the script and check incremented rows.
 
 Note: Make sure that the new rows were inserted in the source database otherwise you may get an error.      
+
+# SCREENSHOT
+![alt text](https://github.com/AnmolKankariya/Incremental-Delta-Load-in-Hive/blob/master/cloudera-quickstart-vm-5.13.0-0-vmware-2018-09-24-22-37-54.png?raw=true)
+Running script after adding new records gives the table with incrementally loaded rows as highlighted in the image.
