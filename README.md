@@ -4,7 +4,7 @@ This repository contains the solution for incremental/delta load in hive using p
 Delta load in hive is a major problem faced by industries and only few approaches were there to perform this in hive.
 One of those approch will give more optimal result with no performance issues.
 
-You will find two files inside repository- 
+You will find two files inside this repository- 
 
    *incremental.sh* - A Shell script that contains relevant command to automate the process.
   
@@ -12,7 +12,8 @@ You will find two files inside repository-
       
 Steps to perform incremental append-
 1. Create a partitioned table in hive.
-            Example:
+            
+      Example:
             
             CREATE EXTERNAL TABLE base_table (
             ID int, 
@@ -24,16 +25,16 @@ Steps to perform incremental append-
             FIELDS TERMINATED BY ','
             LOCATION '/user/hive/base_table';
 
-2. Load the data from your database initially.
+2. Load the data from your database initially using any tool (like sqoop) in that particular directory('/user/hive/base_table').
 3. Give permission to user/hive directory using following command:
       
             sudo hadoop fs -chmod 777 /user/hive/directory_name
       
       Note: Instead of 777, Admin can give permissions according to user's privileges.
-4. Move both files into the same folder.
-5. Run the script and check incremented rows.
+4. Move both files (*incremental.sh* and *part.hql*) into the same folder.
+5. Run the script (*incremental.sh* only) and check incremented rows.
 
-Note: Make sure that the new rows were inserted in the source database otherwise you may get an error.      
+Note: Make sure that new rows were inserted in the source database otherwise you may get an error.      
 
 # SCREENSHOT
 ![alt text](https://github.com/AnmolKankariya/Incremental-Delta-Load-in-Hive/blob/master/cloudera-quickstart-vm-5.13.0-0-vmware-2018-09-24-22-37-54.png?raw=true)
